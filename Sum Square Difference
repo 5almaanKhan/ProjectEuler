@@ -1,0 +1,11 @@
+public class MyClass {
+    public static void main(String args[]) {
+        int sum = 0;
+        int max = 100;
+        for(int i = 1; i <= max; i++) {
+            sum += i * i;
+        }
+        int total = (max * (max + 1) / 2) * (max * (max + 1) / 2) - sum;
+        System.out.println(total);
+    }
+}
