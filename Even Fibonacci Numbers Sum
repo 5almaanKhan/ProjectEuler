@@ -1,0 +1,16 @@
+public class MyClass {
+    public static void main(String args[]) {
+        int sum = 0;
+        int fib1 = 1;
+        int fib2 = 2;
+        int temp;
+        while (fib2 <= 4000000) {
+            if (fib2 % 2 == 0)
+                sum += fib2;
+            temp = fib2;
+            fib2 = fib1 + fib2;
+            fib1 = temp;
+        }
+        System.out.println(sum);
+    }
+}
