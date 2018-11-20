@@ -1,0 +1,22 @@
+import java.lang.Math;
+
+public class MyClass {
+    public static boolean isPal (int num) {
+        String str = "" + num;
+        int j = str.length();
+        for(int i = 0; i < Math.floor(j/2); i++) {
+            if(!(str.charAt(i) == str.charAt(j-i-1)))
+                return false;
+        }
+        return true;
+    }
+    public static void main(String args[]) {
+        int max = 0;
+        for(int i = 900; i < 1000; i++) {
+            for(int j = 900; j < 1000; j++)
+                if(isPal(i*j) && (i*j) > max)
+                    max = i*j;
+        }
+        System.out.println(max);
+    }
+}
